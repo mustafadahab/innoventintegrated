@@ -32,7 +32,7 @@ $transport->UpdatedAt = date('Y-m-d H:i:s');
       $data = file_get_contents("php://input");
 
       // Prepare new cURL resource
-      $curl = new Curl('../public_system/api/stransportschool/update.php',$data);
+      //$curl = new Curl('../public_system/api/stransportschool/update.php',$data);
 
       echo json_encode(
       array('message' => 'School Transport Updated')
