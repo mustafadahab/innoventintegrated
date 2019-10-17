@@ -44,7 +44,7 @@ $(document).ready(function(){
                 }),
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost/AD_task/public_system/api/IO.php",
+                    url: "../public_system/api/IO.php",
                     data: jsonData,
                     success: function(data){
 
@@ -87,7 +87,7 @@ function toJSONString( form ) {
 function loadData(){
     $.ajax({
         type:"GET",
-        url: "http://localhost/AD_task/private_system/api/stransportschool/read.php",
+        url: "./api/stransportschool/read.php",
         success:function(data){
 
             if(data !== 0){
@@ -137,8 +137,7 @@ if($confirm){
     $.when(
         $.ajax({
             type: "POST",
-            url: "http://localhost/AD_task/private_system/api/stransportschool/delete.php",
-            //url: "http://localhost/AD_task/private_system/api/IO.php",
+            url: "./api/stransportschool/delete.php",
             data: jsonData,
             success: function(data){
 
@@ -152,8 +151,7 @@ if($confirm){
         }),
         $.ajax({
             type: "POST",
-            //url: "http://localhost/AD_task/public_system/api/stransportschool/create.php",
-            url: "http://localhost/AD_task/public_system/api/IO.php",
+            url: "../public_system/api/IO.php",
             data: jsonData,
             success: function(data){
 

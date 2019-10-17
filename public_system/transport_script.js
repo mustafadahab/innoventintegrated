@@ -24,8 +24,7 @@ $(document).ready(function(){
             $.when(
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost/AD_task/private_system/api/stransportschool/create.php",
-                    //url: "http://localhost/AD_task/private_system/api/IO.php",
+                    url: "../private_system/api/stransportschool/create.php",
                     data: jsonData,
                     success: function(data){
 
@@ -39,8 +38,7 @@ $(document).ready(function(){
                 }),
                 $.ajax({
                     type: "POST",
-                    //url: "http://localhost/AD_task/public_system/api/stransportschool/create.php",
-                    url: "http://localhost/AD_task/public_system/api/IO.php",
+                    url: "./api/IO.php",
                     data: jsonData,
                     success: function(data){
 
@@ -84,7 +82,7 @@ function toJSONString( form ) {
 function loadData(){
     $.ajax({
         type:"GET",
-        url: "http://localhost/AD_task/private_system/api/stransportschool/read.php",
+        url: "../private_system/api/stransportschool/read.php",
         success:function(data){
 
             if(data !== 0){

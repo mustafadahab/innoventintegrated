@@ -34,7 +34,7 @@
       $data = file_get_contents("php://input");
 
       // Prepare new cURL resource
-      $curl = new Curl('http://localhost/AD_task/public_system/api/stransportschool/create.php',$data);
+      $curl = new Curl('../public_system/api/stransportschool/create.php',$data);
 
     echo json_encode(
       array('message' => 'School Transport Created')
